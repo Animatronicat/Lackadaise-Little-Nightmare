@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cp4woi2drq6vu"]
+
+[ext_resource type="PackedScene" uid="uid://7rew3u8clc1j" path="res://models/hotelplan.blend" id="1_nymtw"]
+[ext_resource type="PackedScene" uid="uid://c5l7g41o002ay" path="res://scenes/ui/camera_3d.tscn" id="2_c726p"]
+
+[node name="plan" type="Node3D" unique_id=1960421220]
+
+[node name="hotelplan" parent="." unique_id=1934592116 instance=ExtResource("1_nymtw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23408198, -1.1920929e-07, -1.0365443)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1618841186]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3322601, 4.0324383, 2.538373)
+light_color = Color(0.8450944, 0.65692836, 0.3377786, 1)
+light_energy = 2.0
+spot_range = 7.0
+spot_angle = 65.89
+
+[node name="Camera3D" parent="." unique_id=287873112 instance=ExtResource("2_c726p")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.3750253, 1.8748094, 1.3699763)
