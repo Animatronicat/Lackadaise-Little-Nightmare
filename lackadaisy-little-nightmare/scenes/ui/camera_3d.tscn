@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c5l7g41o002ay"]
+
+[ext_resource type="Script" uid="uid://iw56740yd1hk" path="res://scripts/ui/camera_3d.gd" id="1_4sdmb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_waict"]
+size = Vector2(341, 1079.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kyeb"]
+size = Vector2(319.5, 1080)
+
+[node name="Camera3D" type="Camera3D" unique_id=287873112]
+script = ExtResource("1_4sdmb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1945559051]
+
+[node name="rotateleft" type="Area2D" parent="CanvasLayer" unique_id=557462627]
+
+[node name="rotateleft" type="CollisionShape2D" parent="CanvasLayer/rotateleft" unique_id=1909289250]
+position = Vector2(170.5, 540.25)
+shape = SubResource("RectangleShape2D_waict")
+
+[node name="rotateright" type="Area2D" parent="CanvasLayer" unique_id=911148962]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/rotateright" unique_id=930992412]
+position = Vector2(1760.75, 540)
+shape = SubResource("RectangleShape2D_3kyeb")

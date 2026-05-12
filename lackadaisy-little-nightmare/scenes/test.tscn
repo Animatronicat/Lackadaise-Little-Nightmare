@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b1eajb68b3e5h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ij1v8"]
+
+[sub_resource type="Sky" id="Sky_ij1v8"]
+
+[sub_resource type="Environment" id="Environment_ij1v8"]
+background_mode = 2
+background_energy_multiplier = 1.95
+sky = SubResource("Sky_ij1v8")
+ambient_light_source = 3
+reflected_light_source = 2
+tonemap_mode = 4
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.55121154, 0.560842, 0.45772672, 1)
+volumetric_fog_enabled = true
+adjustment_enabled = true
+
+[node name="Node3D" type="Node3D" unique_id=1007313974]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2088248739]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(1, 1, 0.56078434, 1)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1178392109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3877583, 3.6573405)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=644345703]
+mesh = SubResource("BoxMesh_ij1v8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=813155909]
+environment = SubResource("Environment_ij1v8")
