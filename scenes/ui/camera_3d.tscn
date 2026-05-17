@@ -2,25 +2,37 @@
 
 [ext_resource type="Script" uid="uid://iw56740yd1hk" path="res://scripts/ui/camera_3d.gd" id="1_4sdmb"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sdmb"]
+size = Vector2(781, 82)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_waict"]
-size = Vector2(341, 1079.5)
+size = Vector2(44, 562)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kyeb"]
-size = Vector2(319.5, 1080)
+size = Vector2(42, 540)
 
 [node name="Camera3D" type="Camera3D" unique_id=287873112]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 script = ExtResource("1_4sdmb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1945559051]
 
-[node name="rotateleft" type="Area2D" parent="CanvasLayer" unique_id=557462627]
+[node name="move_to_door" type="Area2D" parent="CanvasLayer" unique_id=1560785038]
 
-[node name="rotateleft" type="CollisionShape2D" parent="CanvasLayer/rotateleft" unique_id=1909289250]
-position = Vector2(170.5, 540.25)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/move_to_door" unique_id=581162939]
+show_behind_parent = true
+top_level = true
+position = Vector2(923.5, 1039)
+shape = SubResource("RectangleShape2D_4sdmb")
+
+[node name="move_to_fireplace" type="Area2D" parent="CanvasLayer" unique_id=645067514]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/move_to_fireplace" unique_id=1785231609]
+position = Vector2(1898, 539)
 shape = SubResource("RectangleShape2D_waict")
 
-[node name="rotateright" type="Area2D" parent="CanvasLayer" unique_id=911148962]
+[node name="move_to_couch" type="Area2D" parent="CanvasLayer" unique_id=608124194]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/rotateright" unique_id=930992412]
-position = Vector2(1760.75, 540)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/move_to_couch" unique_id=2138865234]
+position = Vector2(21, 552)
 shape = SubResource("RectangleShape2D_3kyeb")

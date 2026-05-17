@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://eqjbkhfelm8g"]
+
+[ext_resource type="PackedScene" uid="uid://be08lcck7b8jw" path="res://assets/models/Old-TV/Tv/source/OldTV_Render.fbx" id="1_3mc44"]
+[ext_resource type="Texture2D" uid="uid://t0c1yfw0gie6" path="res://assets/models/Old-TV/Tv/textures/OldTV_BaseColor.tga.png" id="2_xnid2"]
+[ext_resource type="Texture2D" uid="uid://bqsj6fnf75few" path="res://assets/models/Old-TV/Tv/textures/OldTV_AO.tga.png" id="3_qs1y3"]
+[ext_resource type="Texture2D" uid="uid://xdg1m0d3s6dv" path="res://assets/models/Old-TV/Tv/textures/OldTV_Metallic.tga.png" id="4_7ydqf"]
+[ext_resource type="Texture2D" uid="uid://d5itu8a07siv" path="res://assets/models/Old-TV/Tv/textures/OldTV_Normal.tga.png" id="5_g240u"]
+[ext_resource type="Texture2D" uid="uid://bilgmfjxy2u0b" path="res://assets/models/Old-TV/Tv/textures/OldTV_Roughness.tga.png" id="6_a6bb4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xlhdk"]
+albedo_texture = ExtResource("2_xnid2")
+metallic = 1.0
+metallic_texture = ExtResource("4_7ydqf")
+roughness_texture = ExtResource("6_a6bb4")
+normal_enabled = true
+normal_texture = ExtResource("5_g240u")
+ao_enabled = true
+ao_texture = ExtResource("3_qs1y3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fcga"]
+albedo_texture = ExtResource("2_xnid2")
+metallic = 1.0
+metallic_texture = ExtResource("4_7ydqf")
+roughness_texture = ExtResource("6_a6bb4")
+normal_enabled = true
+normal_texture = ExtResource("5_g240u")
+ao_enabled = true
+ao_texture = ExtResource("3_qs1y3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dliv"]
+albedo_texture = ExtResource("2_xnid2")
+metallic = 1.0
+metallic_texture = ExtResource("4_7ydqf")
+roughness_texture = ExtResource("6_a6bb4")
+normal_enabled = true
+normal_texture = ExtResource("5_g240u")
+ao_enabled = true
+ao_texture = ExtResource("3_qs1y3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6iil"]
+albedo_texture = ExtResource("2_xnid2")
+metallic = 1.0
+metallic_texture = ExtResource("4_7ydqf")
+roughness_texture = ExtResource("6_a6bb4")
+normal_enabled = true
+normal_texture = ExtResource("5_g240u")
+ao_enabled = true
+ao_texture = ExtResource("3_qs1y3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylggf"]
+albedo_texture = ExtResource("2_xnid2")
+metallic = 1.0
+metallic_texture = ExtResource("4_7ydqf")
+roughness_texture = ExtResource("6_a6bb4")
+normal_enabled = true
+normal_texture = ExtResource("5_g240u")
+ao_enabled = true
+ao_texture = ExtResource("3_qs1y3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mdw88"]
+albedo_texture = ExtResource("2_xnid2")
+metallic = 1.0
+metallic_texture = ExtResource("4_7ydqf")
+roughness_texture = ExtResource("6_a6bb4")
+normal_enabled = true
+normal_texture = ExtResource("5_g240u")
+ao_enabled = true
+ao_texture = ExtResource("3_qs1y3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_psjdx"]
+albedo_texture = ExtResource("2_xnid2")
+metallic = 1.0
+metallic_texture = ExtResource("4_7ydqf")
+roughness_texture = ExtResource("6_a6bb4")
+normal_enabled = true
+normal_texture = ExtResource("5_g240u")
+ao_enabled = true
+ao_texture = ExtResource("3_qs1y3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5uyva"]
+albedo_texture = ExtResource("2_xnid2")
+metallic = 1.0
+metallic_texture = ExtResource("4_7ydqf")
+roughness_texture = ExtResource("6_a6bb4")
+normal_enabled = true
+normal_texture = ExtResource("5_g240u")
+ao_enabled = true
+ao_texture = ExtResource("3_qs1y3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ufkvr"]
+albedo_texture = ExtResource("2_xnid2")
+metallic = 1.0
+metallic_texture = ExtResource("4_7ydqf")
+roughness_texture = ExtResource("6_a6bb4")
+normal_enabled = true
+normal_texture = ExtResource("5_g240u")
+ao_enabled = true
+ao_texture = ExtResource("3_qs1y3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn7wv"]
+albedo_texture = ExtResource("2_xnid2")
+metallic = 1.0
+metallic_texture = ExtResource("4_7ydqf")
+roughness_texture = ExtResource("6_a6bb4")
+normal_enabled = true
+normal_texture = ExtResource("5_g240u")
+ao_enabled = true
+ao_texture = ExtResource("6_a6bb4")
+
+[node name="OldTV_Render" unique_id=500578769 instance=ExtResource("1_3mc44")]
+
+[node name="OldTV_Low" parent="." index="0" unique_id=860691740]
+surface_material_override/0 = SubResource("StandardMaterial3D_xlhdk")
+
+[node name="OldTV_03_Low02" parent="." index="1" unique_id=584626280]
+surface_material_override/0 = SubResource("StandardMaterial3D_0fcga")
+
+[node name="OldTV_04_Low" parent="." index="2" unique_id=336214596]
+surface_material_override/0 = SubResource("StandardMaterial3D_8dliv")
+
+[node name="OldTV_06_Low02" parent="OldTV_04_Low" index="0" unique_id=455694263]
+surface_material_override/0 = SubResource("StandardMaterial3D_r6iil")
+
+[node name="OldTV_04_Low03" parent="." index="3" unique_id=358606135]
+surface_material_override/0 = SubResource("StandardMaterial3D_ylggf")
+
+[node name="OldTV_03_Low" parent="." index="4" unique_id=2078053075]
+surface_material_override/0 = SubResource("StandardMaterial3D_mdw88")
+
+[node name="OldTV_02_Low01" parent="." index="5" unique_id=1936408506]
+surface_material_override/0 = SubResource("StandardMaterial3D_psjdx")
+
+[node name="OldTV_02_Low" parent="." index="6" unique_id=1092450114]
+surface_material_override/0 = SubResource("StandardMaterial3D_5uyva")
+
+[node name="OldTV_04_Low_001" parent="." index="7" unique_id=2115793048]
+surface_material_override/0 = SubResource("StandardMaterial3D_ufkvr")
+
+[node name="OldTV_06_Low02_001" parent="OldTV_04_Low_001" index="0" unique_id=318552114]
+surface_material_override/0 = SubResource("StandardMaterial3D_wn7wv")

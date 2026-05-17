@@ -11,6 +11,3 @@ func _ready() -> void:
 	settings.pressed.connect(func() -> void: pass)
 	credits.pressed.connect(func() -> void: pass)
 	exit.pressed.connect(func() -> void: get_tree().quit())
-
-func _process(delta: float) -> void:
-	pass

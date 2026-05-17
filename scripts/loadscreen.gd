@@ -1,7 +1,7 @@
 extends Control
 
 @onready var progress_bar: ProgressBar = $ProgressBar
-@export var next_scene_path: String = "res://scenes/test.tscn"
+@export var next_scene_path: String = "res://scenes/security_room.tscn"
 var progress : Array[float] = []
 
 func _ready() -> void:

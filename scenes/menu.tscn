@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6npfqb3rnyqw" path="res://scripts/menu.gd" id="1_yqeox"]
 [ext_resource type="FontFile" uid="uid://coq6uhgw04lq2" path="res://fonts/LakkiReddy-Regular.ttf" id="2_vjb58"]
+[ext_resource type="AudioStream" uid="uid://lajfq0kv2hj2" path="res://assets/audio/menu.mp3" id="3_con2f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
 bg_color = Color(0, 0, 0, 1)
@@ -65,9 +66,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.8823209, 0, 0.10350294, 1)
 theme_override_colors/font_outline_color = Color(0.5089771, 0.2999257, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_vjb58")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
 theme_override_styles/hover = SubResource("StyleBoxFlat_13sgg")
 text = "Begin to maddnes."
@@ -77,9 +78,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.88235295, 0, 0.101960786, 1)
 theme_override_colors/font_outline_color = Color(0.50980395, 0.29803923, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_vjb58")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_con2f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i6lef")
 text = "Continue the madness."
@@ -89,9 +90,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.88235295, 0, 0.101960786, 1)
 theme_override_colors/font_outline_color = Color(0.50980395, 0.29803923, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_vjb58")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_mhnvy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_70i5f")
 text = "Archive "
@@ -101,9 +102,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.88235295, 0, 0.101960786, 1)
 theme_override_colors/font_outline_color = Color(0.50980395, 0.29803923, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_vjb58")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_4ytvr")
 theme_override_styles/hover = SubResource("StyleBoxFlat_mj5lg")
 text = "Settings"
@@ -113,9 +114,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.88235295, 0, 0.101960786, 1)
 theme_override_colors/font_outline_color = Color(0.50980395, 0.29803923, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_vjb58")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_g3eks")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ufwb2")
 text = "Credits"
@@ -125,9 +126,15 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.88235295, 0, 0.101960786, 1)
 theme_override_colors/font_outline_color = Color(0.50980395, 0.29803923, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_vjb58")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_v86rl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6cdou")
 text = "To go away."
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=314316625]
+stream = ExtResource("3_con2f")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true

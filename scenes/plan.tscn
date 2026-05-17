@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cp4woi2drq6vu"]
 
-[ext_resource type="PackedScene" uid="uid://7rew3u8clc1j" path="res://models/hotelplan.blend" id="1_nymtw"]
+[ext_resource type="PackedScene" uid="uid://7rew3u8clc1j" path="res://assets/models/hotelplan.blend" id="1_nymtw"]
 [ext_resource type="PackedScene" uid="uid://c5l7g41o002ay" path="res://scenes/ui/camera_3d.tscn" id="2_c726p"]
 
 [node name="plan" type="Node3D" unique_id=1960421220]

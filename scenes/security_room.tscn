@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://bla01pefneybo"]
+
+[ext_resource type="PackedScene" uid="uid://c5l7g41o002ay" path="res://scenes/ui/camera_3d.tscn" id="1_6l8rl"]
+[ext_resource type="PackedScene" uid="uid://b5adrvayjhaes" path="res://scenes/models/t_vstand.tscn" id="3_jhvo0"]
+[ext_resource type="PackedScene" uid="uid://eqjbkhfelm8g" path="res://scenes/models/old_tv_render.tscn" id="3_qwatn"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6pchc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwatn"]
+albedo_color = Color(0.18621367, 0.111777924, 0.016169561, 1)
+
+[sub_resource type="Animation" id="Animation_6l8rl"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_jhvo0"]
+resource_name = "move_to_couch"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.4, 1.8, 0), Vector3(0.6357398, 1.8, -2.2078118)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5707964, 0), Vector3(-0.09909992, 0.26312077, -0.026644168)]
+}
+
+[sub_resource type="Animation" id="Animation_7o0jd"]
+resource_name = "move_to_door"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.4, 1.8, 0), Vector3(-4.5, 1.8, -1.6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.7, 0.2),
+"update": 0,
+"values": [Vector3(0, -1.5707965, 0), Vector3(0, -3.8205256, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qwatn"]
+resource_name = "move_to_fareplace"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.4, 1.8, 0), Vector3(-0.4, 1.8, 2.8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5707965, 0), Vector3(-0.19198622, -3.1415927, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qwatn"]
+_data = {
+&"RESET": SubResource("Animation_6l8rl"),
+&"move_to_couch": SubResource("Animation_jhvo0"),
+&"move_to_door": SubResource("Animation_7o0jd"),
+&"move_to_fireplace": SubResource("Animation_qwatn")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l8rl"]
+albedo_color = Color(0.88769865, 0.45519894, 3.85046e-07, 1)
+
+[sub_resource type="Environment" id="Environment_6l8rl"]
+background_mode = 1
+
+[node name="SecurityRoom" type="Node3D" unique_id=545311423]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=394851837]
+mesh = SubResource("ArrayMesh_6pchc")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGMesh3D" unique_id=983447201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5056152, 0.07788086, 0)
+size = Vector3(14.01123, 0.15576172, 11)
+material = SubResource("StandardMaterial3D_qwatn")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="CSGMesh3D" unique_id=633691453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5056152, 0.07788086, 0)
+size = Vector3(14.01123, 0.15576172, 11)
+material = SubResource("StandardMaterial3D_qwatn")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGMesh3D" unique_id=1652373749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4838867, 4.763437, 0)
+size = Vector3(13.967773, 0.15576172, 11)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGMesh3D" unique_id=1336987851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5479603, 2.343524, 3.1778836)
+size = Vector3(0.11, 5, 4.7143736)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGMesh3D" unique_id=761458354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5479603, 2.343524, -3.2786336)
+size = Vector3(0.11, 5, 4.515643)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGMesh3D" unique_id=1171447151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5479603, 4.039386, -0.10805696)
+size = Vector3(0.11, 1.6082764, 1.9117454)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGMesh3D" unique_id=404212175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4555187, 2.343524, -0.0029296875)
+size = Vector3(0.11, 5, 11.076)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGMesh3D" unique_id=947465379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.4067955, 2.343524, -0.0029296875)
+size = Vector3(0.11, 5, 11.076)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGMesh3D" unique_id=155136126]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.4824281, 2.343524, 5.520336)
+size = Vector3(0.11, 5, 14.016027)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGMesh3D" unique_id=686346579]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.040470123, 2.343524, -5.4886265)
+size = Vector3(0.11, 5, 11.076)
+
+[node name="Camera3D" parent="." unique_id=287873112 instance=ExtResource("1_6l8rl")]
+transform = Transform3D(-4.3711385e-08, 0, -1, 0, 1, 0, 0.99999994, 0, -4.371139e-08, 1.4, 1.8, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=880471862]
+libraries/ = SubResource("AnimationLibrary_qwatn")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2146622674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6147714, 0)
+light_color = Color(0.9862426, 0.8404848, 0.6293204, 1)
+light_energy = 2.857
+omni_range = 9.0
+
+[node name="Interior" type="CSGMesh3D" parent="." unique_id=1185085640]
+
+[node name="Fireplace" type="CSGBox3D" parent="Interior" unique_id=106524546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4388733, 0.93619347, 5.46556)
+size = Vector3(2.8408813, 1.8175049, 0.37426758)
+material = SubResource("StandardMaterial3D_6l8rl")
+
+[node name="TVstand" parent="Interior" unique_id=1750772973 instance=ExtResource("3_jhvo0")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 4.0391927, 0, 0)
+
+[node name="OldTV_Render" parent="Interior" unique_id=500578769 instance=ExtResource("3_qwatn")]
+transform = Transform3D(-0.63960624, 0, 0.11577499, 0, 0.65, 0, -0.11577499, 0, -0.63960624, 4.065385, 1.1998409, 0.51423675)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=299534186]
+environment = SubResource("Environment_6l8rl")

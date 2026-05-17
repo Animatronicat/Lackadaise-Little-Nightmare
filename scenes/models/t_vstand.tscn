@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b5adrvayjhaes"]
+
+[ext_resource type="PackedScene" uid="uid://donvfcpaq7751" path="res://assets/models/TV-Stand/source/TVstand.fbx" id="1_uxicp"]
+[ext_resource type="Texture2D" uid="uid://hut5cqe5d30x" path="res://assets/models/TV-Stand/textures/TVStand_mat_diff.png" id="2_7qqgs"]
+[ext_resource type="Texture2D" uid="uid://bu6rlmvgl8ga3" path="res://assets/models/TV-Stand/textures/TVStand_mat_metall.png" id="3_uorf0"]
+[ext_resource type="Texture2D" uid="uid://cpyhqoflr3uc5" path="res://assets/models/TV-Stand/textures/TVStand_mat_nrmal.png" id="4_ekfdl"]
+[ext_resource type="Texture2D" uid="uid://cwxxpvhapq75e" path="res://assets/models/TV-Stand/textures/TVStand_mat_rough.png" id="5_prep2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uxicp"]
+albedo_texture = ExtResource("2_7qqgs")
+metallic = 1.0
+metallic_texture = ExtResource("3_uorf0")
+roughness_texture = ExtResource("5_prep2")
+normal_enabled = true
+normal_texture = ExtResource("4_ekfdl")
+
+[node name="TVstand" unique_id=1750772973 instance=ExtResource("1_uxicp")]
+
+[node name="TVstand" parent="." index="0" unique_id=2073343528]
+surface_material_override/0 = SubResource("StandardMaterial3D_uxicp")
+
+[node name="proxy_Tvstand" parent="TVstand" index="0" unique_id=538662101]
+visible = false

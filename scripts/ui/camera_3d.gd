@@ -1,29 +1,26 @@
 extends Camera3D
 
-var speed = 1
-@onready var rotateright: Area2D = $CanvasLayer/rotateright
-@onready var rotateleft: Area2D = $CanvasLayer/rotateleft
+@onready var camera_3d: Camera3D = $"."
+@onready var move_to_door: Area2D = $CanvasLayer/move_to_door
+@onready var move_to_fireplace: Area2D = $CanvasLayer/move_to_fireplace
+@onready var move_to_couch: Area2D = $CanvasLayer/move_to_couch
+@onready var anim_player: AnimationPlayer = $"../AnimationPlayer"
 
-var is_rotating_l: bool = false
-var is_rotating_r : bool = false
-
+var pos_main : bool = true
+var first_move = ""
+var second_move = ""
 func _ready() -> void:
-	rotateleft.mouse_entered.connect(func() : is_rotating_l = true)
-	rotateleft.mouse_exited.connect(func() : is_rotating_l = false)
-	rotateright.mouse_entered.connect(func() : is_rotating_r = true)
-	rotateright.mouse_exited.connect(func() : is_rotating_r = false)
+	move_to_door.mouse_entered.connect(func() -> void: move("move_to_door"))
+	move_to_fireplace.mouse_entered.connect(func() -> void: move("move_to_fireplace"))
+	move_to_couch.mouse_entered.connect(func() -> void: move("move_to_couch"))
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if is_rotating_l:
-		rot(delta, 1)
-	if is_rotating_r:
-		rot(delta, -1)
-
-func rot(delta, direction):
-	while true:
-		rotation.y += 1 * delta * direction
-		#rotate_y(0.02)
-		if rotateleft.mouse_exited:
-			break
+func move(anim):
+	if pos_main:
+		first_move = anim
+		anim_player.play(anim)
+		pos_main = false
+	else:
+		second_move = anim 
+		if first_move == second_move:
+			anim_player.play_backwards(anim)
+			pos_main = true
