@@ -9,9 +9,6 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwatn"]
 albedo_color = Color(0.18621367, 0.111777924, 0.016169561, 1)
 
-[sub_resource type="Animation" id="Animation_6l8rl"]
-length = 0.001
-
 [sub_resource type="Animation" id="Animation_jhvo0"]
 resource_name = "move_to_couch"
 length = 0.5
@@ -65,7 +62,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(0.7, 0.2),
 "update": 0,
-"values": [Vector3(0, -1.5707965, 0), Vector3(0, -3.8205256, 0)]
+"values": [Vector3(0, -1.5707964, 0), Vector3(0, -3.8205256, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_qwatn"]
@@ -98,7 +95,6 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwatn"]
 _data = {
-&"RESET": SubResource("Animation_6l8rl"),
 &"move_to_couch": SubResource("Animation_jhvo0"),
 &"move_to_door": SubResource("Animation_7o0jd"),
 &"move_to_fireplace": SubResource("Animation_qwatn")
@@ -184,3 +180,7 @@ transform = Transform3D(-0.63960624, 0, 0.11577499, 0, 0.65, 0, -0.11577499, 0, 
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=299534186]
 environment = SubResource("Environment_6l8rl")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=228375471]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.279791, 1.7912678, 0)
+text = "click to move"
