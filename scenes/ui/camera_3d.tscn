@@ -11,9 +11,6 @@ size = Vector2(44, 562)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kyeb"]
 size = Vector2(42, 540)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukidk"]
-size = Vector2(400, 400)
-
 [node name="Camera3D" type="Camera3D" unique_id=287873112]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 script = ExtResource("1_4sdmb")
@@ -39,9 +36,3 @@ shape = SubResource("RectangleShape2D_waict")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/rotate_left" unique_id=2138865234]
 position = Vector2(21, 552)
 shape = SubResource("RectangleShape2D_3kyeb")
-
-[node name="Area2D" type="Area2D" parent="CanvasLayer" unique_id=640253604]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D" unique_id=454029401]
-position = Vector2(909, 516)
-shape = SubResource("RectangleShape2D_ukidk")
