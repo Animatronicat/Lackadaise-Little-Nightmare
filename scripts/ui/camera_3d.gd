@@ -70,3 +70,9 @@ func _on_couch_coll_input_event(camera: Node, event: InputEvent, event_position:
 	if event is InputEventMouseButton:
 		if event.is_pressed():
 			move("move_to_couch")
+
+
+func _on_table_coll_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.is_pressed():
+			move("move_to_table")

@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://bla01pefneybo"]
 
 [ext_resource type="PackedScene" uid="uid://c5l7g41o002ay" path="res://scenes/ui/camera_3d.tscn" id="1_6l8rl"]
+[ext_resource type="Animation" uid="uid://7jhjpepyuqle" path="res://assets/animations/camera/move_to_couch.res" id="2_7utxp"]
 [ext_resource type="PackedScene" uid="uid://b5adrvayjhaes" path="res://scenes/models/t_vstand.tscn" id="3_jhvo0"]
 [ext_resource type="PackedScene" uid="uid://eqjbkhfelm8g" path="res://scenes/models/old_tv_render.tscn" id="3_qwatn"]
+[ext_resource type="Animation" uid="uid://clocr521edl2s" path="res://assets/animations/camera/move_to_door.res" id="3_wudhr"]
+[ext_resource type="Animation" uid="uid://pogmjviwvbmw" path="res://assets/animations/camera/move_to_fireplace.res" id="4_5hu2g"]
 [ext_resource type="AudioStream" uid="uid://emsmqky12pu0" path="res://assets/audio/vine-boom-sound-effect(chosic.com).mp3" id="4_axiax"]
 [ext_resource type="Texture2D" uid="uid://b388f6v6bo24h" path="res://assets/sprites/Z.png" id="5_e0q2m"]
 
@@ -11,9 +14,8 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwatn"]
 albedo_color = Color(0.18621367, 0.111777924, 0.016169561, 1)
 
-[sub_resource type="Animation" id="Animation_jhvo0"]
-resource_name = "move_to_couch"
-length = 0.5
+[sub_resource type="Animation" id="Animation_wudhr"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -21,10 +23,10 @@ tracks/0/path = NodePath("Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 1.8, 0), Vector3(0.6357398, 1.8, -2.2078118)]
+"values": [Vector3(0, 1.8, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -33,14 +35,14 @@ tracks/1/path = NodePath("Camera3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-0.09909992, 0.26312077, -0.026644168)]
+"values": [Vector3(0, 4.712389, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_7o0jd"]
-resource_name = "move_to_door"
+[sub_resource type="Animation" id="Animation_7utxp"]
+resource_name = "move_to_table"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -52,35 +54,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 1.8, 0), Vector3(-4.5, 1.8, -1.6)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(0.7, 0.2),
-"update": 0,
-"values": [Vector3(0, 1.5707964, 0), Vector3(0, 2.5307274, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_qwatn"]
-resource_name = "move_to_fareplace"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1.8, 0), Vector3(-0.4, 1.8, 2.8)]
+"values": [Vector3(0, 1.8, 0), Vector3(2.3922932, 1.8, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -92,14 +66,16 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, -3.1415927, 0), Vector3(-0.19198622, -3.1415927, 0)]
+"values": [Vector3(0, 4.712389, 0), Vector3(0, 4.712389, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwatn"]
 _data = {
-&"move_to_couch": SubResource("Animation_jhvo0"),
-&"move_to_door": SubResource("Animation_7o0jd"),
-&"move_to_fireplace": SubResource("Animation_qwatn")
+&"RESET": SubResource("Animation_wudhr"),
+&"move_to_couch": ExtResource("2_7utxp"),
+&"move_to_door": ExtResource("3_wudhr"),
+&"move_to_fireplace": ExtResource("4_5hu2g"),
+&"move_to_table": SubResource("Animation_7utxp")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l8rl"]
@@ -116,6 +92,9 @@ size = Vector3(3.2634277, 2.6542358, 0.20507813)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_axiax"]
 size = Vector3(4.1938477, 1.6619873, 0.18920898)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7utxp"]
+size = Vector3(1.4233398, 1.9385986, 3.569397)
 
 [node name="SecurityRoom" type="Node3D" unique_id=545311423]
 
@@ -165,7 +144,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.0
 size = Vector3(0.11, 5, 11.076)
 
 [node name="Camera3D" parent="." unique_id=287873112 instance=ExtResource("1_6l8rl")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.8, 0)
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 1.8, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=880471862]
 libraries/ = SubResource("AnimationLibrary_qwatn")
@@ -228,6 +207,13 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.8
 visible = false
 texture = ExtResource("5_e0q2m")
 
+[node name="table_coll" type="Area3D" parent="." unique_id=350904727]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_coll" unique_id=1234548597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.146109, 1.4618621, 0.17440796)
+shape = SubResource("BoxShape3D_7utxp")
+
 [connection signal="input_event" from="door_coll" to="Camera3D" method="_on_coll_door_input_event"]
 [connection signal="input_event" from="fireplace_coll" to="Camera3D" method="_on_coll_fireplace_input_event"]
 [connection signal="input_event" from="couch_coll" to="Camera3D" method="_on_couch_coll_input_event"]
+[connection signal="input_event" from="table_coll" to="Camera3D" method="_on_table_coll_input_event"]
