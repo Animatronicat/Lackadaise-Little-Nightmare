@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6npfqb3rnyqw" path="res://scripts/menu.gd" id="1_yqeox"]
 [ext_resource type="FontFile" uid="uid://coq6uhgw04lq2" path="res://fonts/LakkiReddy-Regular.ttf" id="2_vjb58"]
-[ext_resource type="AudioStream" uid="uid://lajfq0kv2hj2" path="res://assets/audio/menu.mp3" id="3_con2f"]
+[ext_resource type="AudioStream" uid="uid://o5bybl1wbljt" path="res://assets/audio/menu-0.5.mp3" id="3_con2f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
 bg_color = Color(0, 0, 0, 1)
@@ -137,4 +137,3 @@ text = "To go away."
 stream = ExtResource("3_con2f")
 volume_db = -20.0
 autoplay = true
-parameters/looping = true
