@@ -119,6 +119,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_0fcga")
 surface_material_override/0 = SubResource("StandardMaterial3D_8dliv")
 
 [node name="OldTV_06_Low02" parent="OldTV_04_Low" index="0" unique_id=455694263]
+transform = Transform3D(1, -5.1529732e-17, 1.8337269e-18, 4.554295e-17, 0.8660257, -0.5, 2.417678e-17, 0.5, 0.8660257, 0, 0, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_r6iil")
 
 [node name="OldTV_04_Low03" parent="." index="3" unique_id=358606135]
@@ -137,4 +138,5 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5uyva")
 surface_material_override/0 = SubResource("StandardMaterial3D_ufkvr")
 
 [node name="OldTV_06_Low02_001" parent="OldTV_04_Low_001" index="0" unique_id=318552114]
+transform = Transform3D(1, -6.2617744e-17, 8.836958e-19, 5.3786705e-17, 0.8660254, 0.50000006, -3.207416e-17, -0.50000006, 0.8660254, 0.07963508, -0.00039958954, 0.0003543496)
 surface_material_override/0 = SubResource("StandardMaterial3D_wn7wv")

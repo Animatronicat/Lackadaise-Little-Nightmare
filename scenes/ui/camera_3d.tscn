@@ -36,3 +36,9 @@ shape = SubResource("RectangleShape2D_waict")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/rotate_left" unique_id=2138865234]
 position = Vector2(21, 552)
 shape = SubResource("RectangleShape2D_3kyeb")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1415825389]
+transform = Transform3D(0.611, 4.371139e-08, -1.1674288e-15, 0, -4.371139e-08, -0.611, -2.6707658e-08, 1, -2.6707658e-08, 0, 0, 0)
+target_position = Vector3(0, -7, 0)
+collision_mask = 15
+collide_with_areas = true
