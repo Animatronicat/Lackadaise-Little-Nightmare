@@ -3,25 +3,33 @@ extends Camera3D
 @warning_ignore_start("unused_parameter")
 
 @onready var camera_3d: Camera3D = $"."
-@onready var move_to_door: Area2D = $CanvasLayer/move_to_door
+@onready var move_back: Area2D = $CanvasLayer/move_to_door
 @onready var rotate_right: Area2D = $CanvasLayer/rotate_right
 @onready var rotate_left: Area2D = $CanvasLayer/rotate_left
 
 @onready var anim_player: AnimationPlayer = $"../AnimationPlayer"
 @onready var rc3d: RayCast3D = $RayCast3D
+@onready var anim_door: AnimationPlayer = $"../Anim_Door"
+
+@onready var door: Node3D = $"../Interior/Door_-Wooden_-Old_-_8MB"
+
 
 var pos_main : bool = true
+var pos_door : int = 0
+
 var first_move = ""
 var second_move = ""
 var is_rotation_finished : bool = true
 func _ready() -> void:
 	rotate_right.mouse_entered.connect(func(): rotate_cam(-1))
 	rotate_left.mouse_entered.connect(func(): rotate_cam(1))
+	#move_back.mouse_entered.connect(Input.action_press("back")) blyat, da shuyali ono ne rabotaet
+	move_back.mouse_entered.connect(func(): if !pos_main: move())
 	
 
 
-
 func rotate_cam(dir):
+	
 	if is_rotation_finished and pos_main:
 		is_rotation_finished = false
 		var tween = get_tree().create_tween()
@@ -37,16 +45,27 @@ func move():
 		if pos_main:
 			pos_main = false
 			anim_player.play(target.name)
-			print(rc3d.get_collider())
+			if target.name == "move_to_door":
+				pos_door = 1
 		else:
 			pos_main = true
 			anim_player.play_backwards(target.name)
+			pos_door = 0
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if event.is_pressed():
+func _unhandled_input(event: InputEvent):
+	#if event is InputEventMouseButton:
+	if Input.is_action_just_pressed("click_to_move"):
+		if event.is_pressed() and pos_main:
 			move()
-	
+		elif pos_door == 1:
+			anim_door.play("open_door")
+			pos_door = 2
+		elif pos_door == 2:
+			anim_door.play_backwards("open_door")
+			pos_door = 1
+		
+		
+
 	if Input.is_action_just_pressed("left"):
 		rotate_cam(1)
 	

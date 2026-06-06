@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://wm48hdlj7qaj"]
+
+[ext_resource type="PackedScene" uid="uid://bt2l8bhiyp874" path="res://assets/models/Vintage-Gramophone/source/old gramophone.fbx" id="1_expgf"]
+[ext_resource type="Texture2D" uid="uid://bxn542q1fkdf5" path="res://assets/models/Vintage-Gramophone/textures/Material.003_Base_Color3.png" id="2_of2un"]
+[ext_resource type="Texture2D" uid="uid://blimiprds5dje" path="res://assets/models/Vintage-Gramophone/textures/Material.003_Metallic.png" id="3_ppsu0"]
+[ext_resource type="Texture2D" uid="uid://jsahc1h1cb8v" path="res://assets/models/Vintage-Gramophone/textures/Material.003_Normal_OpenGL2.png" id="4_hsx2o"]
+[ext_resource type="Texture2D" uid="uid://x33imylb8ykp" path="res://assets/models/Vintage-Gramophone/textures/Material.003_Roughness.png" id="5_pduh3"]
+[ext_resource type="Texture2D" uid="uid://mke6srr1m04f" path="res://assets/models/Vintage-Gramophone/textures/Material.003_Mixed_AO.png" id="6_k811t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kw2kh"]
+albedo_texture = ExtResource("2_of2un")
+metallic = 1.0
+metallic_texture = ExtResource("3_ppsu0")
+roughness_texture = ExtResource("5_pduh3")
+normal_enabled = true
+normal_texture = ExtResource("4_hsx2o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tf613"]
+albedo_texture = ExtResource("2_of2un")
+metallic = 1.0
+metallic_texture = ExtResource("3_ppsu0")
+roughness_texture = ExtResource("5_pduh3")
+normal_enabled = true
+normal_texture = ExtResource("4_hsx2o")
+ao_texture = ExtResource("6_k811t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_urhcs"]
+albedo_texture = ExtResource("2_of2un")
+metallic = 1.0
+metallic_texture = ExtResource("3_ppsu0")
+roughness_texture = ExtResource("5_pduh3")
+normal_enabled = true
+normal_texture = ExtResource("4_hsx2o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbuym"]
+albedo_texture = ExtResource("2_of2un")
+metallic = 1.0
+metallic_texture = ExtResource("3_ppsu0")
+roughness_texture = ExtResource("5_pduh3")
+normal_enabled = true
+normal_texture = ExtResource("4_hsx2o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3nf8"]
+albedo_texture = ExtResource("2_of2un")
+metallic = 1.0
+metallic_texture = ExtResource("3_ppsu0")
+roughness_texture = ExtResource("5_pduh3")
+normal_enabled = true
+normal_texture = ExtResource("4_hsx2o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ura7"]
+albedo_texture = ExtResource("2_of2un")
+metallic = 1.0
+metallic_texture = ExtResource("3_ppsu0")
+roughness_texture = ExtResource("5_pduh3")
+normal_enabled = true
+normal_texture = ExtResource("4_hsx2o")
+
+[node name="old gramophone" unique_id=1415900305 instance=ExtResource("1_expgf")]
+
+[node name="Cube" parent="." index="0" unique_id=1651167787]
+surface_material_override/0 = SubResource("StandardMaterial3D_kw2kh")
+
+[node name="Cube_002" parent="." index="1" unique_id=1500417616]
+surface_material_override/0 = SubResource("StandardMaterial3D_tf613")
+
+[node name="Cube_003" parent="." index="2" unique_id=498867141]
+surface_material_override/0 = SubResource("StandardMaterial3D_urhcs")
+
+[node name="Cylinder_004" parent="." index="3" unique_id=1303836895]
+surface_material_override/0 = SubResource("StandardMaterial3D_nbuym")
+
+[node name="Plane_002" parent="." index="4" unique_id=1430166439]
+surface_material_override/0 = SubResource("StandardMaterial3D_k3nf8")
+
+[node name="Plane_008" parent="." index="5" unique_id=671309856]
+surface_material_override/0 = SubResource("StandardMaterial3D_0ura7")

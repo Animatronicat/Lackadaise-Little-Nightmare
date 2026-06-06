@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://jnv51mkyjjw3"]
+
+[ext_resource type="PackedScene" uid="uid://devv8mxwu68w7" path="res://assets/models/Wooden-door/source/Door_-Wooden_-Old_-_8MB.fbx" id="1_b176y"]
+[ext_resource type="Texture2D" uid="uid://wgrbceeirvse" path="res://assets/models/Wooden-door/textures/Door_-Wooden_-Old_-_8MB_f_BaseColor.png" id="2_5j54o"]
+[ext_resource type="Script" uid="uid://cs8eypijj6chr" path="res://scripts/door__wooden__old___8_mb.gd" id="2_phrwx"]
+[ext_resource type="Texture2D" uid="uid://7g6sa770lqo2" path="res://assets/models/Wooden-door/textures/Door_-Wooden_-Old_-_8MB_f_Metallic.png" id="3_0kpid"]
+[ext_resource type="Texture2D" uid="uid://gchjuuk4eclw" path="res://assets/models/Wooden-door/textures/Door_-Wooden_-Old_-_8MB_f_Normal.png" id="4_h0axe"]
+[ext_resource type="Texture2D" uid="uid://c2motdnh7qtph" path="res://assets/models/Wooden-door/textures/Door_-Wooden_-Old_-_8MB_f_Roughness.png" id="5_r4dj4"]
+[ext_resource type="Texture2D" uid="uid://d0rle7o737ubt" path="res://assets/models/Wooden-door/textures/Door_-Wooden_-Old_-_8MB_door_BaseColor.png" id="6_r4dj4"]
+[ext_resource type="Texture2D" uid="uid://by1dmcdldbt37" path="res://assets/models/Wooden-door/textures/Door_-Wooden_-Old_-_8MB_door_Metallic.png" id="7_phrwx"]
+[ext_resource type="Texture2D" uid="uid://djehx1yt5dyiq" path="res://assets/models/Wooden-door/textures/Door_-Wooden_-Old_-_8MB_door_Normal.png" id="8_ib5c7"]
+[ext_resource type="Texture2D" uid="uid://g5jsccpmiasw" path="res://assets/models/Wooden-door/textures/Door_-Wooden_-Old_-_8MB_door_Roughness.png" id="9_5sfff"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_phrwx"]
+albedo_texture = ExtResource("2_5j54o")
+metallic = 1.0
+metallic_texture = ExtResource("3_0kpid")
+roughness_texture = ExtResource("5_r4dj4")
+normal_enabled = true
+normal_texture = ExtResource("4_h0axe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el2lg"]
+albedo_texture = ExtResource("2_5j54o")
+metallic = 1.0
+metallic_texture = ExtResource("3_0kpid")
+roughness_texture = ExtResource("5_r4dj4")
+normal_enabled = true
+normal_texture = ExtResource("4_h0axe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eh3lo"]
+albedo_texture = ExtResource("6_r4dj4")
+metallic = 1.0
+metallic_texture = ExtResource("7_phrwx")
+roughness_texture = ExtResource("9_5sfff")
+normal_enabled = true
+normal_texture = ExtResource("8_ib5c7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4dj4"]
+albedo_texture = ExtResource("2_5j54o")
+metallic = 1.0
+metallic_texture = ExtResource("3_0kpid")
+roughness_texture = ExtResource("5_r4dj4")
+normal_enabled = true
+normal_texture = ExtResource("4_h0axe")
+
+[node name="Door_-Wooden_-Old_-_8MB" unique_id=562242176 instance=ExtResource("1_b176y")]
+script = ExtResource("2_phrwx")
+
+[node name="F" parent="01" parent_id_path=PackedInt32Array(940007098) index="0" unique_id=416935976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11917573, -1.1082945, -0.00486454)
+surface_material_override/0 = SubResource("StandardMaterial3D_phrwx")
+
+[node name="door" parent="01" parent_id_path=PackedInt32Array(940007098) index="1" unique_id=1963647242]
+transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, 0.11917573, -1.0787766, -0.0048645027)
+surface_material_override/0 = SubResource("StandardMaterial3D_el2lg")
+surface_material_override/1 = SubResource("StandardMaterial3D_eh3lo")
+
+[node name="handel" parent="01/door" index="0" unique_id=539464847]
+surface_material_override/0 = SubResource("StandardMaterial3D_r4dj4")

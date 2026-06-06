@@ -6,74 +6,28 @@
 [ext_resource type="PackedScene" uid="uid://eqjbkhfelm8g" path="res://scenes/models/old_tv_render.tscn" id="3_qwatn"]
 [ext_resource type="Animation" uid="uid://clocr521edl2s" path="res://assets/animations/camera/move_to_door.res" id="3_wudhr"]
 [ext_resource type="Animation" uid="uid://pogmjviwvbmw" path="res://assets/animations/camera/move_to_fireplace.res" id="4_5hu2g"]
+[ext_resource type="Animation" uid="uid://q55avkl58y0f" path="res://assets/animations/camera/move_to_table.res" id="5_5hu2g"]
+[ext_resource type="Script" uid="uid://bc1kdgaclk3e2" path="res://scripts/interior.gd" id="5_wudhr"]
+[ext_resource type="Animation" uid="uid://b1011tip0led" path="res://assets/animations/door/open_door.res" id="6_a0nx6"]
+[ext_resource type="PackedScene" uid="uid://wm48hdlj7qaj" path="res://scenes/models/old_gramophone.tscn" id="7_draax"]
+[ext_resource type="PackedScene" uid="uid://jnv51mkyjjw3" path="res://scenes/models/door__wooden__old___8mb.tscn" id="8_7utxp"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6pchc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwatn"]
 albedo_color = Color(0.18621367, 0.111777924, 0.016169561, 1)
 
-[sub_resource type="Animation" id="Animation_wudhr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 1.8, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 4.712389, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_7utxp"]
-resource_name = "move_to_table"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1.8, 0), Vector3(2.3922932, 1.8, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 4.712389, 0), Vector3(0, 4.712389, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwatn"]
 _data = {
-&"RESET": SubResource("Animation_wudhr"),
 &"move_to_couch": ExtResource("2_7utxp"),
 &"move_to_door": ExtResource("3_wudhr"),
 &"move_to_fireplace": ExtResource("4_5hu2g"),
-&"move_to_table": SubResource("Animation_7utxp")
+&"move_to_table": ExtResource("5_5hu2g")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lnt8l"]
+_data = {
+&"open_door": ExtResource("6_a0nx6")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l8rl"]
@@ -109,16 +63,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4838867, 4.763437, 0)
 size = Vector3(13.967773, 0.15576172, 11)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Boxes" unique_id=1336987851]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5479603, 2.343524, 3.1778836)
-size = Vector3(0.11, 5, 4.7143736)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5479603, 2.343524, 3.1228976)
+size = Vector3(0.11, 5, 4.8243456)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Boxes" unique_id=761458354]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5479603, 2.343524, -3.2786336)
-size = Vector3(0.11, 5, 4.515643)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5479603, 2.343524, -3.22981)
+size = Vector3(0.11, 5, 4.6132903)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Boxes" unique_id=1171447151]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5479603, 4.039386, -0.10805696)
-size = Vector3(0.11, 1.6082764, 1.9117454)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5479603, 4.0992765, -0.13036475)
+size = Vector3(0.11, 1.4884949, 1.956361)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Boxes" unique_id=404212175]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4555187, 2.343524, -0.0029296875)
@@ -142,6 +96,9 @@ transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 1
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=880471862]
 libraries/ = SubResource("AnimationLibrary_qwatn")
 
+[node name="Anim_Door" type="AnimationPlayer" parent="." unique_id=1945119292]
+libraries/ = SubResource("AnimationLibrary_lnt8l")
+
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2146622674]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6147714, 0)
 light_color = Color(0.9862426, 0.8404848, 0.6293204, 1)
@@ -149,6 +106,7 @@ light_energy = 2.857
 omni_range = 9.0
 
 [node name="Interior" type="CSGMesh3D" parent="." unique_id=1185085640]
+script = ExtResource("5_wudhr")
 
 [node name="Fireplace" type="CSGBox3D" parent="Interior" unique_id=106524546]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4388733, 0.93619347, 5.46556)
@@ -161,12 +119,24 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 4.03
 [node name="OldTV_Render" parent="Interior" unique_id=500578769 instance=ExtResource("3_qwatn")]
 transform = Transform3D(-0.63960624, 0, 0.11577499, 0, 0.65, 0, -0.11577499, 0, -0.63960624, 4.065385, 1.1998409, 0.51423675)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=299534186]
-environment = SubResource("Environment_6l8rl")
-
-[node name="Label3D2" type="Label3D" parent="." unique_id=1706093505]
+[node name="Label3D2" type="Label3D" parent="Interior" unique_id=1706093505]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.045408726, 1.463693, -4.539529)
 text = "cool couch"
+
+[node name="old gramophone" parent="Interior" unique_id=1415900305 instance=ExtResource("7_draax")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 3.5905995, 1.0440204, -3.6268346)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Interior" unique_id=636245204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6444917, 0.5459034, -3.6279922)
+
+[node name="Door_-Wooden_-Old_-_8MB" parent="Interior" unique_id=562242176 instance=ExtResource("8_7utxp")]
+transform = Transform3D(-6.1195937e-10, 0, -0.0139999995, 0, 0.0139999995, 0, 0.0139999995, 0, -6.1195937e-10, -5.5561633, 0, -0.07713503)
+
+[node name="door" parent="Interior/Door_-Wooden_-Old_-_8MB/01" parent_id_path=PackedInt32Array(562242176, 940007098) index="1" unique_id=1963647242]
+transform = Transform3D(0.99999964, 0, 0, 0, 1, 0, 0, 0, 0.99999964, 0.11917573, -1.0787766, -0.0048644543)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=299534186]
+environment = SubResource("Environment_6l8rl")
 
 [node name="move_to_door" type="Area3D" parent="." unique_id=1260808669]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6868596, 0, 0)
@@ -196,3 +166,5 @@ shape = SubResource("BoxShape3D_axiax")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="move_to_table" unique_id=1234548597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.146109, 1.4618621, 0.17440796)
 shape = SubResource("BoxShape3D_7utxp")
+
+[editable path="Interior/Door_-Wooden_-Old_-_8MB"]
